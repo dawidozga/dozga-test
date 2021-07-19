@@ -1,1 +1,1 @@
-# dozga-test
+# Dawid Ozga WP Test
