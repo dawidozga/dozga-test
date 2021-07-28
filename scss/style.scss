@@ -1,6 +1,28 @@
+// Import bootstrap
+
+@import "../node_modules/bootstrap/scss/functions";
+
+// Override Default variables
+$border-radius: 0;
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+
+@import '../node_modules/bootstrap/scss/transitions';
+@import '../node_modules/bootstrap/scss/accordion';
+
+
 // Import files
+
 @import 'variables';
 @import 'mixins';
-@import 'normalize';
 @import 'defaults';
 @import 'navbar';
+@import 'faq';

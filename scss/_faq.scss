@@ -1,0 +1,141 @@
+/* Block: FAQ */
+
+/**
+ * Table of Contents:
+
+ * 1.0 - faq
+	* 1.1 - faq__text
+    * 1.2 - faq__h
+    * 1.3 - faq__description
+    * 1.4 - faq__accordion
+*/
+
+/* 1.0 - faq */
+.faq {
+    padding: 25px 0;
+
+    @include media-min($content-mobile-on) {
+        padding: 60px 0 100px;
+        background-color: #f6f6f6;
+    }
+    
+    /* 1.1 - faq__text */
+    &__text {
+        max-width: 550px;
+        
+        @include media-min($content-mobile-on) {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    
+    /* 1.2 - faq__h */
+    &__h {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 1.2;
+        color: $header-color;
+        margin: 40px 0 20px;
+        
+        @include media-min($content-mobile-on) {
+            font-size: 48px;
+        }
+    }
+    
+    /* 1.3 - faq__description */
+    &__description {
+        font-size: 16px;
+        line-height: 1.75;
+        
+        @include media-min($content-mobile-on) {
+            font-size: 18px;
+            line-height: 1.56;
+        }
+    }
+    
+    /* 1.4 - faq__accordion */
+    &__accordion {
+        margin: 25px -#{$container-padding} 0;
+        
+        @include media-min($content-mobile-on) {
+            margin: 50px 0 20px;
+        }
+        
+        .accordion-item {
+            border-radius: 0;
+            border: 0;
+            
+            @include media-max($content-mobile-on) {
+                border-bottom: 1px solid #e1e1e1;
+            }
+            
+            @include media-min($content-mobile-on) {
+                margin-bottom: 3px;
+            }
+        }
+        
+        .accordion-button {
+            padding: 25px 80px 25px 25px;
+            position: relative;
+            background: transparent;
+            box-shadow: none;
+            font-size: 18px;
+            color: $header-color;
+            line-height: 1.44;
+            align-items: center;
+            min-height: 100px;
+            
+            @include media-min($content-mobile-on) {
+                padding: 20px calc(6% + 75px) 20px 6%;
+                font-size: 22px;
+                line-height: 1.36;
+            }
+            
+            &:after {
+                content: '+';
+                @include absolute(35px,25px);
+                margin: 0;
+                background: $primary-color;
+                color: #fff;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 700;
+                font-size: 20px;
+                border-radius: 50%;
+                transition: background $transition, transform $transition;
+                
+                @include media-min($content-mobile-on) {
+                    @include absolute(30px,30px);
+                    font-size: 28px;
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            
+            &:hover {
+                &:after {
+                    background: $secondary-color;
+                }
+            }
+            
+            &:not(.collapsed) {
+                &:after {
+                    content: '–';
+                    background: $secondary-color;
+                }
+            }
+        }
+        
+        .accordion-body {
+            padding: 0 25px 20px;
+            
+            @include media-min($content-mobile-on) {
+                padding: 0 calc(6% + 75px) 40px 6%;
+            }
+        }
+    }
+}

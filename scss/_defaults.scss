@@ -1,8 +1,8 @@
-*, 
-*::before, 
-*::after {
-    box-sizing: border-box;
-}
+// *, 
+// *::before, 
+// *::after {
+//     box-sizing: border-box;
+// }
 
 body {
     font-family: 'Lato', sans-serif;
@@ -12,13 +12,13 @@ body {
 .container {
     width: 100%;
     max-width: 1180px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: $container-padding;
+    padding-left: $container-padding;
     margin-right: auto;
     margin-left: auto;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+// img {
+//     max-width: 100%;
+//     height: auto;
+// }

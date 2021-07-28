@@ -1,14 +1,29 @@
+/**
+ * Content
+ */
+
 $primary-color: #2ab7c5;
 $secondary-color: #173750;
 
 $font-color: #7f7f7f;
+$header-color: #0e2638;
 
 $transition-time: .5s;
 $transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 $transition: $transition-time $transition-timing-function;
 
+
 /**
- * Header
+ * Defaults
+ */
+
+$container-padding: 15px;
+
+$content-mobile-on: 'md';
+
+
+/**
+ * Navbar
  */
 
 $navbar-mobile-on: 'xl';

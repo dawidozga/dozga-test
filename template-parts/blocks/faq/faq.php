@@ -45,19 +45,24 @@ $faq_accordion = get_field('faq_accordion');
             </div>
         </div>
         <?php if ($faq_accordion) : ?>
-            <div class="accordion" id="faqAccordion">
+            <div class="accordion faq__accordion" id="faqAccordion">
                 <?php foreach ($faq_accordion as $index => $faq_tab) {
                     $faq_question = $faq_tab['faq_question'];
                     $faq_answear = $faq_tab['faq_answear'];
-                    $tab_id = wp_unique_id();
+                    $button_aria_expanded = 'false';
+                    $collapse_classes = '';
+                    if ($index == 0) {
+                        $button_aria_expanded = 'true';
+                        $collapse_classes = 'show';
+                    }
                 ?>
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading<?php echo $tab_id; ?>">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $tab_id; ?>" aria-expanded="false" aria-controls="collapse<?php echo $tab_id; ?>">
+                        <h2 class="accordion-header" id="<?php echo $id . '-heading-' . $index; ?>">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#<?php echo $id . '-collapse-' . $index; ?>" aria-expanded="<?php echo $button_aria_expanded; ?>" aria-controls="<?php echo $id . '-collapse-' . $index; ?>">
                                 <?php echo $faq_question; ?>
                             </button>
                         </h2>
-                        <div id="collapse<?php echo $tab_id; ?>" class="accordion-collapse collapse" aria-labelledby="heading<?php echo $tab_id; ?>" data-bs-parent="#faqAccordion">
+                        <div id="<?php echo $id . '-collapse-' . $index; ?>" class="accordion-collapse collapse <?php echo $collapse_classes; ?>" aria-labelledby="<?php echo $id . '-heading-' . $index; ?>" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
                                 <?php echo $faq_answear; ?>
                             </div>

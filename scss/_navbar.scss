@@ -13,6 +13,7 @@
 /* 1.0 - site-header */
 .site-header {
     @include fixed(0,0,auto,0);
+    z-index: 10;
     background-color: $navbar-background-color;
     transition: background-color $transition;
     height: $navbar-height;

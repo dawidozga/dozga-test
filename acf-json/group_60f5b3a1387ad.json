@@ -1,6 +1,6 @@
 {
     "key": "group_60f5b3a1387ad",
-    "title": "FAQ",
+    "title": "Block: FAQ",
     "fields": [
         {
             "key": "field_60f5b3b291a6b",
@@ -26,7 +26,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "80",
+                        "width": "60",
                         "class": "",
                         "id": ""
                     },
@@ -45,7 +45,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "40",
                         "class": "",
                         "id": ""
                     },
@@ -162,5 +162,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1626718194
+    "modified": 1627486977
 }
