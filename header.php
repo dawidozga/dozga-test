@@ -22,18 +22,25 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="80">
     <?php wp_body_open(); ?>
 
-    <header class="site-header">
+    <header id="navbar" class="site-header">
         <div class="container site-header__container">
-            <nav class="site-header__nav">
+            <nav id="navbarNav" class="site-header__nav">
 
                 <div class="site-header__logo">
-                    <?php the_custom_logo(); ?>
+                    <div class="std-logo">
+                        <?php the_custom_logo(); ?>
+                    </div>
+                    <div class="sticky-logo">
+                        <a href="<?php echo home_url(); ?>" class="custom-logo-link" rel="home">
+                            <img src="<?php echo get_theme_mod('logo_on_sticky_menu'); ?>" class="custom-logo" alt="<?php echo get_bloginfo('name'); ?>" />
+                        </a>
+                    </div>
                 </div>
 
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#site-header__menu" aria-controls="site-header__menu" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler collapsed" aria-label="Toggle navigation">
                     <div class="navbar-toggler__in">
                         <span class="line top"></span>
                         <span class="line middle"></span>
