@@ -68,6 +68,10 @@
             
             @include media-max($content-mobile-on) {
                 border-bottom: 1px solid #e1e1e1;
+
+                &:first-child {
+                    border-top: 1px solid #e1e1e1;
+                }
             }
             
             @include media-min($content-mobile-on) {
@@ -106,13 +110,17 @@
                 font-weight: 700;
                 font-size: 20px;
                 border-radius: 50%;
-                transition: background $transition, transform $transition;
+                transition: background-color $transition, transform $transition;
+                padding-bottom: 2px;
                 
                 @include media-min($content-mobile-on) {
-                    @include absolute(30px,30px);
+                    top: 30px;
+                    right: 30px;
                     font-size: 28px;
                     width: 40px;
                     height: 40px;
+                    padding-bottom: 3px;
+                    padding-left: 1px;
                 }
             }
             

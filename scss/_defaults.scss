@@ -1,12 +1,6 @@
-// *, 
-// *::before, 
-// *::after {
-//     box-sizing: border-box;
-// }
-
 body {
-    font-family: 'Lato', sans-serif;
     color: $font-color;
+    position: relative;
 }
 
 .container {
@@ -17,8 +11,3 @@ body {
     margin-right: auto;
     margin-left: auto;
 }
-
-// img {
-//     max-width: 100%;
-//     height: auto;
-// }

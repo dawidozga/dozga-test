@@ -66,11 +66,3 @@ $break-xl: 1200px;
 	bottom: $bottom;
 	left: $left;
 }
-
-@mixin fixed($top, $right, $bottom: auto, $left: auto) {
-	position: fixed;
-	top: $top;
-	right: $right;
-	bottom: $bottom;
-	left: $left;
-}

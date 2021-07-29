@@ -2,7 +2,10 @@
 
 @import "../node_modules/bootstrap/scss/functions";
 
-// Override Default variables
+
+// Override default Bootstrap variables
+
+$font-family-sans-serif: 'Lato', sans-serif;
 $border-radius: 0;
 
 @import "../node_modules/bootstrap/scss/variables";
@@ -25,4 +28,5 @@ $border-radius: 0;
 @import 'mixins';
 @import 'defaults';
 @import 'navbar';
-@import 'faq';
+@import 'block_faq';
+@import 'block_empty';

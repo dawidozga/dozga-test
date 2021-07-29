@@ -26,14 +26,15 @@ $content-mobile-on: 'md';
  * Navbar
  */
 
-$navbar-mobile-on: 'xl';
+$navbar-mobile-on: 'md';
 
 $navbar-background-color: transparent;
 $navbar-sticky-background-color: #f6f6f6;
+$navbar-sticky-mobile-background-color: #fff;
 $navbar-open-mobile-background-color: #0e2638;
 
 $navbar-height: 100px;
 $navbar-mobile-height: 85px;
 
-$menu-item-margin: 0 0 0 30px;
-$menu-item-mobile-margin: 10px 0;
+$nav-item-margin: 0 0 0 30px;
+$nav-item-mobile-margin: 10px 0;
