@@ -49,16 +49,18 @@ $faq_accordion = get_field('faq_accordion');
                 <?php foreach ($faq_accordion as $index => $faq_tab) {
                     $faq_question = $faq_tab['faq_question'];
                     $faq_answear = $faq_tab['faq_answear'];
+                    $accordion_button_classes = 'collapsed';
                     $button_aria_expanded = 'false';
                     $collapse_classes = '';
                     if ($index == 0) {
+                        $accordion_button_classes = '';
                         $button_aria_expanded = 'true';
                         $collapse_classes = 'show';
                     }
                 ?>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="<?php echo $id . '-heading-' . $index; ?>">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#<?php echo $id . '-collapse-' . $index; ?>" aria-expanded="<?php echo $button_aria_expanded; ?>" aria-controls="<?php echo $id . '-collapse-' . $index; ?>">
+                            <button class="accordion-button <?php echo $accordion_button_classes; ?>" type="button" data-bs-toggle="collapse" data-bs-target="#<?php echo $id . '-collapse-' . $index; ?>" aria-expanded="<?php echo $button_aria_expanded; ?>" aria-controls="<?php echo $id . '-collapse-' . $index; ?>">
                                 <?php echo $faq_question; ?>
                             </button>
                         </h2>
